@@ -1,0 +1,5 @@
+{
+  "name": "SmartQuiz",
+  "description": "A nodejs+angularjs website",
+  "keywords": ["node", "express", "static"]
+}

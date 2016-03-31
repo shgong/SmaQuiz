@@ -1,0 +1,70 @@
+
+
+.bg-dark-gray {
+    background-color: #333;
+}
+
+.bg-image{
+    background: url('/img/bg.jpg') no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.nav li {
+    color:#fff;
+}
+
+.select-small{
+    margin: 0 !important;
+}
+
+.markdown-body{
+    padding-top: 50px;
+    color:#fff;
+}
+button div{
+  white-space: normal;
+}
+
+img{
+    max-width:100%;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+code{
+    font-family: "Courier New", Courier, monospace !important;
+}
+
+.intro{
+    margin-top: 40px;
+   padding: 30px;
+   border-radius:5px;
+   background-color: rgba(0,0,0, 0.5);
+}
+
+pre {
+   background-color: rgba(255, 255, 255, 0.1);
+   border:0px;
+   color:#eee;
+}
+
+
+.question{
+    margin:20px 0px 20px 0px;
+}
+
+.btn pre{
+    text-align:left;
+    color:#222;
+    background-color: transparent;
+    padding:0px;
+}
+
+.btn p{
+    margin:0px;
+}
