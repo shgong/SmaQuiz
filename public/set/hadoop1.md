@@ -29,7 +29,10 @@
 <a-->The values are in sorted order.
 <a-->The values are arbitrary ordered, but multiple runs of the same MapReduce job will always have the same ordering.
 <a-->Since the values come from mapper outputs, the reducers will receive contiguous sections of sorted values.<q-->
-### 7. Your client application submits a MapReduce job to your Hadoop cluster. Identify the Hadoop daemon on which the Hadoop framework will look for an available slot schedule a MapReduce operation.
+### 7. Identify the Hadoop daemon on which the Hadoop framework will look for an available slot schedule a MapReduce operation.
+
+Your client application submits a MapReduce job to your Hadoop cluster. 
+
 <a-->JobTracker
 <a-->TaskTracker
 <a-->NameNode
@@ -86,7 +89,10 @@
 <a-->All data produced by a single mapper
 <a-->All data for a given value, regardless of which mapper(s) produced it
 <q-->
-### 16. If you run the word count MapReduce program with m mappers and r reducers, how many output files will you get at the end of the job? And how many key-value pairs will there be in each file? Assume k is the number of unique words in the input files.
+### 16. Run the word count MapReduce program with m mappers and r reducers
+
+ how many output files will you get at the end of the job? And how many key-value pairs will there be in each file? Assume k is the number of unique words in the input files.
+
 <a-->There will be r files, each with approximately k/r key-value pairs
 <a-->There will be r files, each with exactly k/r key-value pairs
 <a-->There will be r files, each with approximately k/m key-value pairs
@@ -145,7 +151,10 @@
 <a-->HDFS becomes unavailable to new MapReduce jobs, but running jobs will continue until completion.
 <a-->HDFS becomes temporarily unavailable until an administrator starts redirecting client requests to the Secondary NameNode.
 <q-->
-### 26. Your cluster has 10 DataNodes, each with a single 1 TB hard drive. You utilize all your disk capacity for HDFS, reserving none for MapReduce. You implement default replication settings. What is the storage capacity of your Hadoop cluster (assuming no compression)?
+### 26. What is the storage capacity of your Hadoop cluster (assuming no compression)?
+
+Your cluster has 10 DataNodes, each with a single 1 TB hard drive. You utilize all your disk capacity for HDFS, reserving none for MapReduce. You implement default replication settings. 
+
 <a-->About 3 TB
 <a-->About 5 TB
 <a-->About 10 TB
@@ -169,7 +178,10 @@
 <a-->As many final key-value pairs as desired, but they must have the same type as the intermediate key-value pairs
 <a-->One final key-value pair per value associated with the key; no restrictions on the type
 <q-->
-### 30. You write a MapReduce job to process 100 files in HDFS. Your MapReduce algorithm uses TextInputFormat and the IdentityReducer: the mapper applies a regular expression over input values and emits key-value pairs with the key consisting of the matching text, and the value containing the filename and byte offset. Determine the difference between setting the number of reducers to zero. 
+### 30. Determine the difference between setting the number of reducers to zero. 
+
+You write a MapReduce job to process 100 files in HDFS. Your MapReduce algorithm uses TextInputFormat and the IdentityReducer: the mapper applies a regular expression over input values and emits key-value pairs with the key consisting of the matching text, and the value containing the filename and byte offset. 
+
 <a-->With zero reducers, instances of matching patterns are stored in multiple files on HDFS. With one reducer, all instances of matching patterns are gathered together in one file on HDFS 
 <a-->With zero reducers, all instances of matching patterns are gathered together in one file on HDFS.
 <a-->With one reducer, instances of matching patterns stored in multiple files on HDFS 

@@ -401,7 +401,7 @@ How many times will the Reducer’s reduce method be invoked?
 
 
 
-### 30. which two resources should you expect to be bottlenecks?
+### 30. Which two resources should you expect to be bottlenecks?
 
 You need to create a job that does frequency analysis on input data. You will do this by writing a Mapper that uses TextInputFormat and splits each value (a line of text from an input file) into individual characters. For each one of these characters, you will emit the character as a key and an InputWritable as the value. As this will produce proportionally more intermediate data than input data, which two resources should you expect to be bottlenecks?
 
