@@ -201,7 +201,7 @@ class Base1 {
 }
 abstract class Abs1 extends Base1 {}
 ```
-<q-->
+
 ### 12. What is the result?
 
 ```
@@ -380,6 +380,223 @@ System.out.println(array[1]+array[4]);
 <a--> Improves the program structure because the programmer can choose where to handle 
 exceptions
 
+<a--> Improves the program structure because exceptions must be handled in the method in 
+which they occurred
+
 <a--> allows the creation of new exceptions that are tailored to the particular program being
 
-<a--> Improves the program structure because the error handling code is separated from the normal program function<q-->
+<a--> Improves the program structure because the error handling code is separated from the 
+normal program function<q-->
+
+### 24. What is the result?
+```
+int[] xx = null;
+for (int ii:xx) {
+    System.out.println(ii);
+}
+```
+<a--> Java.lang.NullPointerException
+<a--> null
+<a--> compilation fails
+<a--> 0<q-->
+
+### 25. Which declaration initializes a boolean variable?
+
+Which declaration initializes a boolean variable?
+
+<a--> boolean j = (1 < 5);
+
+<a--> boolean h = 1;
+
+<a--> boolean k = 0;
+
+<a--> boolean m = null;<q-->
+
+### 26. Why will the code not compile?
+```
+public class Basic {
+    private static int letter;
+    public static int getLetter();
+    public static void Main(String[] args){
+        System.out.println(getLetter());
+    }
+}
+```
+<a--> The getLetter method has no body.
+<a--> The letter field is uninitialized.
+<a--> It contains a method named Main instead of main
+<a--> A static field cannot be private.
+<a--> There is no setLetter method.<q-->
+
+### 27. What will make this code compile and run?
+```
+1. public class Simple {
+2.    public float price;
+3.    public static void main(String[] args){
+4.        Simple price = new Simple();
+5.        price = 4; }}
+```
+
+<a--> Change line 5 to the following: price.price = 4;
+
+<a--> Change line 2 to the following: Public int price
+
+<a--> Change line 5 to the following: Price = (float) 4:
+
+<a--> Change line 4 to the following: Float price = new simple ();
+
+<a--> Change line 5 to the following: Price = (Simple) 4;
+
+<a--> Change line 4 to the following: int price = new simple ();
+
+<a--> Change line 5 to the following: Price = 4f;<q-->
+
+### 28. What is the result?
+```
+int ii = 2;
+do { System.out.println(ii);} while (--ii);
+```
+<a--> compilation fails
+
+<a--> 2 1 0
+
+<a--> null
+
+<a--> an infinite loop
+
+<a--> 2 1<q-->
+
+### 29. Which is not benefit of using ArrayList over array in software development
+
+<a--> is multi.thread safe
+
+<a--> reduces memory footprint
+
+<a--> dynamically resizes based on the number of elements in the list<q-->
+
+### 30.Which one is valid as a replacement for foo?
+```
+Boolean b1 = true; Boolean b2 = false; int i=0;
+while (foo) {}
+```
+<a--> “foo”.equals(“bar”)
+
+<a--> b1.compareTo(b2)
+
+<a--> i = 1
+
+<a--> i == 2? -1 : 0<q-->
+
+### 31. Which package are not automatically imported into the java source file by the java compiler?
+```
+public class Test{}
+```
+
+<a--> Java.util
+
+<a--> The package with no name
+
+<a--> Java.util and The package with no name
+
+<a--> Java.util and java.lang
+
+<a--> Java.lang<q-->
+
+### 32. What is true about the class Wow?
+```
+public abstract class Wow{
+    private int wow;
+    public Wow(int wow){thiss.wow=wow;}
+    public void wow(){}
+    private void wowza(){}
+}
+```
+<a--> It compiles without error.
+
+<a--> It does not compile because an abstract class cannot have instance variables.
+
+<a--> It does not compile because an abstract class must have at least one abstract method.
+
+<a--> It does not compile because an abstract class cannot have private methods.
+
+<a--> It does not compile because an abstract class must have a constructor with no arguments.<q-->
+
+### 33. What is the result?
+```
+static void m(int i){i+=7;}
+public static void main(String[] args) {
+    int j = 12;
+    m(j);
+    System.out.println(j);
+}
+```
+<a--> 12
+<a--> 7
+<a--> An exception is thrown at run time
+<a--> 19
+<a--> Compilation fails<q-->
+
+### 34. Which statement is true?
+<a--> An abstract class can implement an interface.
+
+<a--> An abstract class CANNOT be extended by an abstract class.
+
+<a--> An interface can be extended by an abstract class.
+
+<a--> An interface CANNOT be extended by another interface.
+
+<a--> An abstract class can be extended by an interface.<q-->
+
+### 35. The catch clause argument is always of type__________.
+
+<a--> Throwable
+<a--> Exception but NOT including RuntimeException
+<a--> RuntimeException
+
+<a--> CheckedException
+
+<a--> Error
+
+<a--> Exception<q-->
+### 36. What is the result?
+```
+ArrayList<Integer> list = new ArrayList<>(1);
+list.add(1001);
+list.add(1002);
+System.out.println(list.get(list.size()));
+```
+<a--> An exception is thrown at run time due to error on line 4
+
+<a--> Compilation fails due to an error on line 1.
+
+<a--> An exception is thrown at run time due to error on line 3
+
+<a--> 1002<q-->
+
+### 37.What is the result?
+```
+for (int ii=0;ii<4;ii++){
+    System.out.println("ii ="+ ii++);
+}
+```
+<a--> ii = 0 ii = 2
+
+<a--> ii = 0 ii = 1 ii = 2 ii = 3
+
+<a--> ii = 3
+
+<a--> Compilation fails.<q-->
+
+### 38. Which is a valid abstract class?
+
+<a--> public abstract class Car { protected abstract void accelerate(); }
+
+<a--> public abstract class Car { protected void accelerate(); }
+
+<a--> public interface Car { protected abstract void accelerate(); }
+
+<a--> public abstract class Car { protected final void accelerate(); }
+
+<a--> public abstract class Car { protected abstract void accelerate() { //more car can do }}
+
+
