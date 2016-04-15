@@ -12,7 +12,7 @@
 
         $scope.testurl ="choose";
 
-        $scope.question="";
+        $scope.question="Loading";
         $scope.answers="";
 
         $scope.answered = -1;
@@ -22,21 +22,24 @@
         $scope.correct = 0;
         $scope.total = 0;
 
-
-
+        var MobileRedirect = function(){
+                if($('#mobile-list').hasClass('in'))
+                    $('#mobile-list').collapse('hide'); //hide when selected in mobile
+        };
 
         $scope.SetTestSet=function(url){
 
             if (url=="") url="choose";
             $scope.testurl = url;
 
+
+
             $http({
                 method:'GET',
                 url:'/set/'+$scope.testurl+'.md'
             }).then(function(res){
+                MobileRedirect();
                 currentset =  marked(res.data).split('<q-->');
-                if($('#mobile-list').hasClass('in'))
-                    $('#mobile-list').collapse('hide'); //hide when selected in mobile
                 $scope.number=-1;
                 $scope.NextQuestion();
             },function(res){
@@ -46,10 +49,13 @@
             });
         };
 
+
+
         $scope.SetQuestion=function(){
             if(currentset.length>1)
             if(Number.parseInt($scope.setnum))
             {
+                MobileRedirect();
                 $scope.number=Number.parseInt($scope.setnum)-2;
                 $scope.NextQuestion();
                 $scope.setnum="";
