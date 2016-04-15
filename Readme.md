@@ -2,6 +2,8 @@
 
 SmaQuiz is a light-weight web application for multiple choice quiz.
 
+[__Visit the website__](http://smaquiz.herokuapp.com)
+
 Menu Bar
 
 - Use top-left menu to choose a test set
